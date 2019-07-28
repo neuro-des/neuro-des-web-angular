@@ -1,0 +1,33 @@
+<section class="row mt-3 box" *ngIf="load">
+        <header class="col-auto mr-2 h-100 box-header">
+            <span>Load</span>
+        </header>
+        <main class="col d-flex flex-column justify-content-start h-100 p-4 box-content">
+            <div class="row">
+                <div class="col">
+                    Please copy and paste the saved data from a previous simulation into the box below.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <textarea></textarea>
+                </div>
+            </div>
+        </main>
+</section>
+
+<div class="row justify-content-center load">
+    <div class="col-11 col-md-5 justify-content-center rounded button shadow" (click)="onLoad()" *ngIf="!load">
+        Load Existing Configuration
+    </div>
+    <span class="w-100"></span>
+    <div class="col-11 col-md-5 my-5 justify-content-center or">
+        OR
+    </div>
+    <span class="w-100"></span>
+    <div class="col-11 col-md-5 justify-content-center rounded button shadow" routerLink="../2">
+        Start New Simulation
+    </div>
+</div>
+
+

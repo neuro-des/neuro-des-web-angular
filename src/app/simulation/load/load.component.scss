@@ -1,0 +1,42 @@
+@import 'mixins';
+@import 'variables';
+
+@import '../../box';
+
+.load {
+
+    & > div {
+        @include flex-center;
+
+        height: 3.5rem;
+
+        font-size: 1.8rem;
+    }
+
+    & > .button {
+        border: 1px solid black;
+
+        background: $colour-med;
+        box-shadow: inset 0px -1px 0px 1px $colour-light;
+
+        cursor: pointer;
+
+        &:hover {
+            background: darken($colour-med, 10);
+        }
+
+    }
+
+    & > .or {
+        font-weight: 900;
+        font-size: 2rem;
+    }
+}
+
+.box-header {
+    @include box-header;
+}
+
+.box-content {
+    @include box-content;
+}

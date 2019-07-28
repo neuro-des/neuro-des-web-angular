@@ -1,0 +1,24 @@
+@mixin box-header {
+    min-height: 15rem;
+    height: 100%;
+
+    @include flex-center;
+
+    background: $colour-med;
+
+    font-size: 2rem;
+
+    & > span {
+        writing-mode: vertical-rl;
+        transform: rotate(-180deg);
+	    //transform-origin: left top 0;
+    }
+}
+
+@mixin box-content {
+    min-height: 15rem;
+
+    background: $colour-light;
+
+    font-size: 1.6rem;
+}

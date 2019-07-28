@@ -1,0 +1,12 @@
+@import 'mixins';
+@import 'variables';
+
+@import '../../box';
+
+.box-header {
+    @include box-header;
+}
+
+.box-content {
+    @include box-content;
+}

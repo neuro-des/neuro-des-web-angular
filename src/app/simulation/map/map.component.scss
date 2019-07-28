@@ -1,0 +1,63 @@
+@import 'mixins';
+@import 'variables';
+
+@import '../../box';
+
+.box-header {
+    @include box-header;
+}
+
+.box-content {
+    @include box-content;
+}
+
+.buttons {
+
+    & > div {
+        @include flex-center;
+
+        height: 3.5rem;
+
+        font-size: 1.8rem;
+    }
+
+    & > .button {
+        border: 1px solid black;
+
+        background: $colour-med;
+        box-shadow: inset 0px -1px 0px 1px $colour-light;
+
+        cursor: pointer;
+
+        &:hover {
+            background: darken($colour-med, 10);
+        }
+
+        &[disabled] {
+            background: $colour-background;
+
+            color: gray;
+            border: 1px solid gray;
+
+            box-shadow: none !important;
+
+            cursor: not-allowed;
+        }
+
+    }
+
+    & > .or {
+        font-weight: 900;
+        font-size: 2rem;
+    }
+}
+
+.continue {
+    border: 0.3rem solid $colour-background;
+
+    &:hover {
+        background: $colour-background;
+    }
+
+    transition: background 0.2s ease;
+}

@@ -1,0 +1,59 @@
+<section class="row mt-3 box">
+        <header class="col-auto mr-2 h-100 box-header">
+            <span>Info</span>
+        </header>
+        <main class="col d-flex flex-column justify-content-start h-100 p-4 box-content">
+            <div class="row">
+                <div class="col">
+                    In order to run the simulation, the software requires a generated 'Map Schema' of the area you want to run the simulation. The map contains the following information:
+                </div>
+                <span class="w-100"></span>
+                <div class="col ml-5">
+                    <ol>
+                        <li class="text-monospace">The total catchment area</li>
+                        <li class="text-monospace">The location, type and capacity of each hospital</li>
+                        <li class="text-monospace">The catchment areas of each hospital</li>
+                        <li class="text-monospace">A randomly generated set of possible patient locations, with driving times calculated to their nearest hospital (using google maps algorithms)</li>
+                    </ol>
+                </div>
+                <span class="w-100"></span>
+                <div class="col">
+                    In future version, there will be a separate application used to generate this map data that you will be able to upload here. <br>
+                    Currently, you are able to select from a list of pre-built Map Schema that the development team have created. If there is a schema that you would like to see us create, please contact us from the main page.
+                </div>
+            </div>
+        </main>
+</section>
+
+<section class="row my-4 justify-content-center buttons">
+    <div class="col-5 col-md-4 justify-content-center rounded font-italic button" disabled>
+        Custom Generated
+    </div>
+    <div class="col-1 col-md-1 justify-content-center or">
+        OR
+    </div>
+    <div class="col-5 col-md-4 justify-content-center rounded shadow button" (click)="prebuilt = true">
+        Pre-built
+    </div>
+</section>
+
+<section class="row mt-5 box" *ngIf="prebuilt">
+        <header class="col-auto mr-2 h-100 box-header">
+            <span>Pre-built</span>
+        </header>
+        <main class="col d-flex flex-column justify-content-between h-100 p-4 box-content">
+            <div class="row">
+                <div class="col">
+                    Please choose from the following options:
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <button class="p-2 continue" routerLink="../3">
+                        CONTINUE
+                    </button>
+                </div>
+            </div>
+        </main>
+</section>
+

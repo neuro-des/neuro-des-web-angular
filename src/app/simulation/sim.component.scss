@@ -1,0 +1,28 @@
+@import 'mixins';
+@import 'variables';
+
+.prog {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    height: 0.5rem;
+
+    background: $colour-dark;
+
+    &-step {
+        @include flex-center;
+
+        font-size: 1.6rem;
+
+        & > span {
+            display: block;
+            width: 1.8rem;
+            height: 1.8rem;
+
+            border: 2px solid black;
+            border-radius: 100%;
+
+            background: $colour-background;
+        }
+    }
+}
