@@ -1,0 +1,126 @@
+{
+    "Ambulance": [
+        {
+            "category": "Time to Call",
+            "info": "Blah blah",
+            "type": "geometric",
+            "data": ["amb_call_time", "mins", [1,0,100],[13,0,100],[29,0,100]]
+        },
+        {
+            "category": "Time to Arrival",
+            "info": "Blah blah",
+            "type": "geometric",
+            "data": ["amb_arrive_time", "mins", [8,0,100],[11,0,100],[14,0,100]]
+        },
+        {
+            "category": "Assessment Time",
+            "info": "Blah blah",
+            "type": "geometric",
+            "data": ["amb_assess_time", "mins", [10,0,100],[14,0,100],[20,0,100]]
+        }
+    ],
+    "Transfer": [
+        {
+            "category": "Proportion to Transfer",
+            "info": "Blah blah",
+            "type": "proportion",
+            "data": {
+                "proportion_nearest_rural": ["Nearest Rural",0.95,0,1],
+                "proportion_nearest_peripheral": ["Nearest Peripheral",0.95,0,1],
+                "proportion_nearest_central": ["Nearest Central",0.95,0,1],
+                "proportion_transfer": ["General Transfer",0.01,0,1]
+            }
+        },
+        {
+            "category": "Time to Ambulance Arrival",
+            "info": "Blah blah",
+            "type": "geometric",
+            "data": ["transfer_amb_arrive_time", "mins", [7,0,100],[10,0,100],[14,0,100]]
+        },
+        {
+            "category": "Time to Ambulance Depart",
+            "info": "Blah blah",
+            "type": "geometric",
+            "data": ["transfer_amb_depart_time", "mins", [14,0,100],[17,0,100],[21,0,100]]
+        },
+        {
+            "category": "CSC Receive Transfer Time",
+            "info": "Blah blah",
+            "type": "geometric",
+            "data": ["csc_receive_ecr_transfer_time", "mins", [15,0,100],[20,0,100],[35.75,0,100]]
+        },
+        {
+            "category": "Proportion requiring re-CT",
+            "info": "Blah blah",
+            "type": "proportion",
+            "data": {
+                "proportion_transferred_requiring_CT": ["Requiring Re-scan",0.3,0,1]
+            }
+        }
+    ],
+    "Rural & PSC": [
+        {
+            "category": "Hospital Admission Time",
+            "info": "Blah blah",
+            "type": "geometric",
+            "data": ["hosp_admit_time", "mins", [8,0,100],[15,0,100],[23.5,0,100]]
+        },
+        {
+            "category": "CT Scan Time",
+            "info": "Blah blah",
+            "type": "geometric",
+            "data": ["ct_scan_time", "mins", [44,0,100],[59.5,0,100],[83,0,100]]
+        }
+    ],
+    "CSC": [
+        {
+            "category": "Hospital Admission Time",
+            "info": "Blah blah",
+            "type": "binomial",
+            "data": ["csc_hosp_admit_time", "mins", [10,0,100],[2.5,0,100]]
+        },
+        {
+            "category": "CT Scan Time",
+            "info": "Blah blah",
+            "type": "binomial",
+            "data": ["csc_ct_scan_time", "mins", [15,0,100],[2.5,0,100]]
+        },
+        {
+            "category": "Door to Puncture Time",
+            "info": "Blah blah",
+            "type": "binomial",
+            "data": ["csc_door_to_puncture", "mins", [15,0,100],[2.5,0,100]]
+        }
+    ],
+    "ECR": [
+        {
+            "category": "Proportion to Receive ECR",
+            "info": "Blah blah",
+            "type": "proportion",
+            "data": {
+                "proportion_transferred_requiring_CT": ["Requiring Re-scan",0.3,0,1]
+            }
+        },
+        {
+            "category": "Angiogram Reperfusion Time",
+            "info": "Blah blah",
+            "type": "geometric",
+            "data": ["angio_reperfusion_time", "mins", [23.75,0,100],[40,0,100],[73.5,0,100]]
+        },
+        {
+            "category": "Angiogram Cut-off Time",
+            "info": "Blah blah",
+            "type": "custom",
+            "data": {
+                "optimal": ["Optimal time to Angio",2,0,10],
+                "cutoff": ["Cutoff time for Angio",6,0,10]
+            }
+        },
+        {
+            "category": "Acute Bed Stay",
+            "info": "Blah blah",
+            "type": "binomial",
+            "data": ["acute_bed_stay_hours", "hours", [48,0,100],[6,0,100]]
+        }
+    ]
+}

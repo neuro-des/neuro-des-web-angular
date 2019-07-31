@@ -1,9 +1,24 @@
 @import 'mixins';
 @import 'variables';
 
+.global-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.global-main {
+    overflow-y: scroll;
+
+    padding-bottom: 2rem;
+}
+
 header {
     width: 100%;
-    height: 6vh;
+    height: 5rem;
 
     background: $colour-dark;
 }
@@ -35,4 +50,9 @@ header {
 
         transition: background 0.2s ease;
     }
+}
+
+.main {
+    height: 100%;
+    overflow-y: auto;
 }

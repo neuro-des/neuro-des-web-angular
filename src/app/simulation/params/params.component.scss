@@ -10,3 +10,18 @@
 .box-content {
     @include box-content;
 }
+
+.param {
+    background: rgba(darken($colour-light,10), 0.5);
+
+    font-size: 1.3rem;
+
+    &-header {
+        height: 2.5rem;
+        font-size: 1.6rem;
+    }
+
+    &-info {
+
+    }
+}

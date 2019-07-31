@@ -1,0 +1,12 @@
+@import 'mixins';
+@import 'variables';
+
+.param-container {
+    background: darken($colour-light, 2);
+}
+
+.param-header {
+    color: $colour-dark;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
