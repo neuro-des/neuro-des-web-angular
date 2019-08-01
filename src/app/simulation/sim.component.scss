@@ -13,16 +13,42 @@
         @include flex-center;
 
         font-size: 1.6rem;
+    }
+}
+
+.circle {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+
+    border: 2px solid black;
+    border-radius: 100%;
+
+    background: $colour-background;
+
+    cursor: pointer;
+
+    &.active {
+        width: 2.2rem;
+        height: 2.2rem;
+
+        background: $colour-dark;
 
         & > span {
-            display: block;
-            width: 1.8rem;
-            height: 1.8rem;
+            top: -3rem;
 
-            border: 2px solid black;
-            border-radius: 100%;
-
-            background: $colour-background;
+            color: olivedrab;
+            font-weight: 600;
+            font-size: 1.45rem;
         }
+    }
+
+    & > span {
+        position: absolute;
+        top: -2.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-size: 1.4rem;
     }
 }

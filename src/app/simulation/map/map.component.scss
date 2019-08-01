@@ -53,11 +53,5 @@
 }
 
 .continue {
-    border: 0.3rem solid $colour-background;
-
-    &:hover {
-        background: $colour-background;
-    }
-
-    transition: background 0.2s ease;
+    @include box-button;
 }

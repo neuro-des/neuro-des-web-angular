@@ -15,10 +15,30 @@
     <header class="col-auto mr-2 h-100 box-header">
         <span>{{category.key}}</span>
     </header>
-    <main class="col d-flex flex-column justify-content-start h-100 p-4 box-content">
-        <div class="row px-2">
+    <main class="col d-flex flex-column justify-content-start h-100 box-content">
+        <div class="row p-2">
             <div class="col-12 col-md-6 p-2" *ngFor="let set of category.value">
                 <nd-param-box class="shadow-sm param" [data]="set"></nd-param-box>
+            </div>
+        </div>
+    </main>
+</section>
+
+<section class="row mt-3 box">
+    <header class="col-auto mr-2 h-100 box-header">
+        <span>Review</span>
+    </header>
+    <main class="col d-flex flex-column justify-content-start h-100 p-4 box-content">
+        <div class="row">
+            <div class="col">
+                Please review all inputted parameters and then continue.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-end">
+                <button class="p-2 continue" routerLink="../4">
+                    CONTINUE
+                </button>
             </div>
         </div>
     </main>

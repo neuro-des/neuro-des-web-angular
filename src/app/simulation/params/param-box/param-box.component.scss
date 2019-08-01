@@ -2,11 +2,19 @@
 @import 'variables';
 
 .param-container {
-    background: darken($colour-light, 2);
+    background: darken($colour-light, 5);
+    height: 100%;
 }
 
 .param-header {
     color: $colour-dark;
     font-size: 1.7rem;
     font-weight: 600;
+}
+
+input {
+    background: white;
+    padding: 0.25rem;
+
+    text-align: center;
 }

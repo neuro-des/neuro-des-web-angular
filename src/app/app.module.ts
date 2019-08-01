@@ -12,6 +12,7 @@ import { MapComponent } from './simulation/map/map.component';
 import { LoadComponent } from './simulation/load/load.component';
 import { ParamsComponent } from './simulation/params/params.component';
 import { ParamBoxComponent } from './simulation/params/param-box/param-box.component';
+import { RunComponent } from './simulation/run/run.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ParamBoxComponent } from './simulation/params/param-box/param-box.compo
     MapComponent,
     LoadComponent,
     ParamsComponent,
-    ParamBoxComponent
+    ParamBoxComponent,
+    RunComponent
   ],
   imports: [
     BrowserModule,
