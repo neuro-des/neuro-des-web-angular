@@ -1,3 +1,4 @@
+import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class LoadComponent implements OnInit {
     load : boolean = false;
 
-    constructor() { }
+    constructor(private ds : DataService) { }
 
     ngOnInit() {
     }
 
     onLoad() {
         this.load = !this.load;
+    }
+
+    onStart() {
+        this.ds.reset();
+        this.ds.completeStart();
     }
 }

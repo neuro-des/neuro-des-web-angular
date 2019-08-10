@@ -1,4 +1,4 @@
-<div class="container-fluid shadow-sm param-container">
+<div [formGroup]="outputForm" class="container-fluid shadow-sm param-container">
     <div class="row">
         <div class="col param-header">
             {{data.category}}
@@ -23,21 +23,21 @@
             Q1
         </div>
         <div class="col-6">
-            <input type="number" value="{{data.data[2][0]}}" min="{{data.data[2][1]}}" max="{{data.data[2][2]}}">
+            <input formControlName="q1" type="number" value="{{data.data[2][0]}}" min="{{data.data[2][1]}}" max="{{data.data[2][2]}}">
         </div>
         <span class="w-100"></span>
         <div class="col-3 col-sm-2 p-2 d-flex justify-content-center">
             Median
         </div>
         <div class="col-6">
-            <input type="number" value="{{data.data[3][0]}}" min="{{data.data[3][1]}}" max="{{data.data[3][2]}}">
+            <input formControlName="median" type="number" value="{{data.data[3][0]}}" min="{{data.data[3][1]}}" max="{{data.data[3][2]}}">
         </div>
         <span class="w-100"></span>
         <div class="col-3 col-sm-2 p-2 d-flex justify-content-center">
             Q3
         </div>
         <div class="col-6">
-            <input type="number" value="{{data.data[4][0]}}" min="{{data.data[4][1]}}" max="{{data.data[4][2]}}">
+            <input formControlName="q3" type="number" value="{{data.data[4][0]}}" min="{{data.data[4][1]}}" max="{{data.data[4][2]}}">
         </div>
     </div>
     <div class="row" *ngIf="data.type == 'binomial'">
@@ -45,14 +45,14 @@
             Mean
         </div>
         <div class="col-6">
-            <input type="number" value="{{data.data[2][0]}}" min="{{data.data[2][1]}}" max="{{data.data[2][2]}}">
+            <input formControlName="median" type="number" value="{{data.data[2][0]}}" min="{{data.data[2][1]}}" max="{{data.data[2][2]}}">
         </div>
         <span class="w-100"></span>
         <div class="col-3 col-sm-2 p-2 d-flex justify-content-center">
             SD
         </div>
         <div class="col-6">
-            <input type="number" value="{{data.data[3][0]}}" min="{{data.data[3][1]}}" max="{{data.data[3][2]}}">
+            <input formControlName="sd" type="number" value="{{data.data[3][0]}}" min="{{data.data[3][1]}}" max="{{data.data[3][2]}}">
         </div>
     </div>
     <div class="row" *ngIf="data.type != 'binomial' && data.type != 'geometric'">
@@ -61,7 +61,7 @@
                 {{p.value[0]}}
             </div>
             <div class="col-6">
-                <input type="number" value="{{p.value[1]}}" min="{{p.value[2]}}" max="{{p.value[3]}}">
+                <input formControlName="{{p.key}}" type="number" value="{{p.value[1]}}" min="{{p.value[2]}}" max="{{p.value[3]}}">
             </div>
             <span class="w-100"></span>
         </ng-container>

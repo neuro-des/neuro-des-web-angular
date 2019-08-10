@@ -112,8 +112,8 @@
             "info": "Blah blah",
             "type": "custom",
             "data": {
-                "optimal": ["Optimal time to Angio",2,0,10],
-                "cutoff": ["Cutoff time for Angio",6,0,10]
+                "angio_optimal": ["Optimal time to Angio",2,0,10],
+                "angio_cutoff": ["Cutoff time for Angio",6,0,10]
             }
         },
         {

@@ -1,3 +1,4 @@
+import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
 
 import PARAMS from './params.json';
@@ -10,9 +11,13 @@ import PARAMS from './params.json';
 export class ParamsComponent implements OnInit {
     params = PARAMS;
 
-    constructor() { }
+    constructor(private ds : DataService) { }
 
     ngOnInit() {
+    }
+
+    onContinue() {
+        this.ds.completeParams();
     }
 
 }

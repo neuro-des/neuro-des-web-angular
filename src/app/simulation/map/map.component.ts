@@ -1,3 +1,4 @@
+import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class MapComponent implements OnInit {
     prebuilt : boolean = false;
 
-    constructor() { }
+    constructor(private ds : DataService) { }
 
     ngOnInit() {
+    }
+
+    onContinue() {
+        this.ds.completeMap();
     }
 
 }
