@@ -1,39 +1,48 @@
-<section class="row mt-3 box">
+<section [formGroup]="runForm" class="row mt-3 box">
         <header class="col-auto mr-2 h-100 box-header">
             <span>Final</span>
         </header>
         <main class="col d-flex flex-column justify-content-start h-100 p-4 box-content">
-            <div class="row">
-                <div class="col">
+            <div class="row py-2">
+                <div class="col-6 col-md-3">
                     Strokes Per Year
                 </div>
-                <div class="col">
-                    20000000
+                <div class="col-6 col-md-3">
+                    <input formControlName="strokes_per_year" type="number">
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
+            <div class="row py-2">
+                <div class="col-6 col-md-3">
                     Start Date
                 </div>
-                <div class="col">
-                    20000000
+                <div class="col-6 col-md-3">
+                    <input formControlName="start_date" type="date">
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    Runtime
+            <div class="row py-2">
+                <div class="col-6 col-md-3">
+                    Runtime (yrs)
                 </div>
-                <div class="col">
-                    20000000
+                <div class="col-6 col-md-3">
+                    <input formControlName="simulation_runtime" type="number">
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    Burn In
+            <div class="row py-2">
+                <div class="col-6 col-md-3">
+                    Burn In (yrs)
                 </div>
-                <div class="col">
-                    20000000
+                <div class="col-6 col-md-3">
+                    <input formControlName="burn_in" type="number">
                 </div>
             </div>
         </main>
+</section>
+
+<section class="row mt-3 box">
+    <header class="col-auto mr-2 h-100 box-header">
+        <span>Run</span>
+    </header>
+    <main class="col d-flex flex-column justify-content-start h-100 p-4 box-content">
+
+    </main>
 </section>

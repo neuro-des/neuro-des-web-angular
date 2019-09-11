@@ -33,7 +33,13 @@ export class DataService {
         for (let [key,value] of Object.entries(obj)) {
             this.params[key] = value;
         }
-        console.log(this.params);
+    }
+
+    public updateSim(obj) {
+        for (let [key,value] of Object.entries(obj)) {
+            this.sim[key] = value;
+        }
+        console.log(JSON.stringify(this.outputData(), null, 4));
     }
 
     public reset() {
@@ -47,5 +53,12 @@ export class DataService {
 
         this.sim = {};
         this.simCompleted = false;
+    }
+
+    public outputData() {
+        return {
+            meta: this.sim,
+            parameters: this.params
+        }
     }
 }

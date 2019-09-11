@@ -10,3 +10,10 @@
 .box-content {
     @include box-content;
 }
+
+input {
+    background: white;
+    padding: 0.25rem;
+
+    text-align: center;
+}

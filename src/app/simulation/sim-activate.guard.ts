@@ -15,6 +15,7 @@ export class SimActivateGuard implements CanActivate {
         next: ActivatedRouteSnapshot,
         state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
+        return true;
         switch(next.url[0].path) {
             case '1':
                 return true;
